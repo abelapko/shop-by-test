@@ -1,0 +1,45 @@
+version: '3'
+
+tasks:
+  wait-for-db:
+    cmds:
+     - docker-compose run --rm app bash -c "/usr/local/bin/wait-for-mysql.sh \$MYSQL_HOST \$MYSQL_PORT 200"
+
+  migrate:
+    desc: Run migrations for the database
+    cmds:
+      - docker-compose run --rm app bash -c "goose -dir database/migrations mysql \"\$MYSQL_USER:\$MYSQL_PASSWORD@tcp(\$MYSQL_HOST:\$MYSQL_PORT)/\$MYSQL_DATABASE\" up && goose -dir database/migrations mysql \"root:\$MYSQL_ROOT_PASSWORD@tcp(\$MYSQL_HOST:\$MYSQL_PORT)/\$MYSQL_DATABASE_TEST\" up"
+
+  set-env:
+    cmds:
+      - cp .env.tpl .env
+
+  fetch:
+    cmds:
+      - docker-compose run --rm app go run cmd/fetch_rates.go
+
+  test:
+    cmds:
+      - task wait-for-db
+      - docker-compose run --rm app bash -c "cd /app && go test ./tests/api/..."
+
+  app-build:
+    cmds:
+      - docker-compose build
+
+  app-up:
+    cmds:
+      - docker-compose up -d
+
+  app-down-v:
+    cmds:
+      - docker-compose down -v
+
+  app-init:
+    desc: Initialize and start the project
+    cmds:
+      - task app-build
+      - task app-down-v
+      - task app-up
+      - task wait-for-db
+      - task migrate
