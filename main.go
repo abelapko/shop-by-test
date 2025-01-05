@@ -7,6 +7,7 @@ import (
 	"currency-service/routes"
 
 	"github.com/gin-gonic/gin"
+	_ "github.com/pressly/goose/v3"
 )
 
 func main() {
