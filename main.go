@@ -2,6 +2,7 @@ package main
 
 import (
 	"currency-service/config"
+	"currency-service/cron"
 	"currency-service/database"
 	"currency-service/routes"
 
@@ -13,6 +14,8 @@ func main() {
 	cfg.Check()
 
 	database.Connect()
+
+	go cron.StartCron()
 
 	router := gin.Default()
 	routes.SetupRoutes(router)
