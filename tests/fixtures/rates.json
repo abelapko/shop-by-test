@@ -1,0 +1,16 @@
+[
+  {
+    "Code": "USD",
+    "Nominal": 1,
+    "Name": "US Dollar",
+    "Rate": 1.2345,
+    "Date": "2025-01-05"
+  },
+  {
+    "Code": "EUR",
+    "Nominal": 1,
+    "Name": "Euro",
+    "Rate": 1.5678,
+    "Date": "2025-01-05"
+  }
+]
