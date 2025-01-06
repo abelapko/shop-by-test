@@ -52,7 +52,7 @@ See more developer command in [Taskfile.yml](/Taskfile.yml).
     cd currency-service
     ```
 
-2. Install tool for run command
+2. Install tool for run commands
     ```bash
     sudo wget https://github.com/go-task/task/releases/download/v3.40.1/task_linux_amd64.tar.gz -O /tmp/task_linux_amd64.tar.gz && sudo tar -xz -C /usr/local/bin -f /tmp/task_linux_amd64.tar.gz && sudo rm -f /tmp/task_linux_amd64.tar.gz
     ```
