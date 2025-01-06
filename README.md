@@ -22,6 +22,10 @@
 
 ![Demo](/docs/demo.gif)
 
+<img src="/docs/demo-api.png" alt="Demo-API" height="350">
+
+<img src="/docs/demo-db.png" alt="Demo-DB" height="350">
+
 ## About solution
 
 When run the application, an HTTP server is started on local port `8080` and a cron job for fetching currency is set to run every midnight.
