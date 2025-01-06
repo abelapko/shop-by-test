@@ -22,9 +22,9 @@
 
 ![Demo](/docs/demo.gif)
 
-<img src="/docs/demo-api.png" alt="Demo-API" height="350">
+<img src="/docs/demo-api.png" alt="Demo-API" height="450">
 
-<img src="/docs/demo-db.png" alt="Demo-DB" height="350">
+<img src="/docs/demo-db.png" alt="Demo-DB" height="450">
 
 ## About solution
 
