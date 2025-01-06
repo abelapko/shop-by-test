@@ -73,8 +73,8 @@ See more developer command in [Taskfile.yml](/Taskfile.yml).
     ```
 
 6.  Use the server:
-    - Go to `http://localhost:8080/rates` to get all currency rates.
-    - For getting the rate for a specific day: `http://localhost:8080/rates/2025-01-05`.
+    - Go to [http://localhost:8080/rates](http://localhost:8080/rates) to get all currency rates.
+    - For getting the rate for a specific day: [http://localhost:8080/rates/2025-01-05](http://localhost:8080/rates/2025-01-05).
     
 7. Run tests:
    ```bash
