@@ -48,7 +48,7 @@ See more developer command in [Taskfile.yml](/Taskfile.yml).
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/currency-service.git
+    git clone https://github.com/abelapko/shop-by-test.git currency-service
     cd currency-service
     ```
 
