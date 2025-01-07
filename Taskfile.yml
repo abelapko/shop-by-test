@@ -27,10 +27,6 @@ tasks:
       - task wait-for-db
       - docker-compose run --rm app bash -c "cd /app && go test ./tests/api/..."
 
-  fix-rules:
-    cmds:
-      - find . -name "*.sh" -exec chmod +x {} \;
-
   app-build:
     cmds:
       - docker-compose build
@@ -46,7 +42,6 @@ tasks:
   app-init:
     desc: Initialize and start the project
     cmds:
-      - task fix-rules
       - task app-build
       - task app-down-v
       - task app-up
